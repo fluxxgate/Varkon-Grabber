@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Varkon Grabber</title>
+</head>
+<body class="bg-[#0f0f0f] min-h-screen p-4 text-gray-300 text-sm">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <div class="text-2xl font-bold text-white">Varkon Grabber</div>
+            <div class="text-gray-400 text-xs">v0.0.0_DEMOV | Build 0 | varkon corp</div>
+        </div>
+
+        <!-- Token and App Inputs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+            <div>
+                <input type="text" placeholder="Discord Token"
+                       class="w-full p-2 rounded bg-[#1a1a1a] border border-gray-700 text-gray-200 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-xs">
+            </div>
+            <div class="flex gap-2">
+                <input type="text" placeholder="App to Open/Close"
+                       class="flex-1 p-2 rounded bg-[#1a1a1a] border border-gray-700 text-gray-200 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-xs">
+                <button class="px-3 bg-indigo-600 hover:bg-indigo-700 rounded text-xs whitespace-nowrap">Execute</button>
+            </div>
+        </div>
+
+        <!-- Checkbox Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-4">
+            <!-- File System -->
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get Desktop</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get Documents</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get Downloads</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get Home</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get OneDrive</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get Recent</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get Recycle Bin</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get Root</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Get SSH</span>
+            </label>
+
+            <!-- System Checks -->
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Admin</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Apps</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check BIOS</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check CPU</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check DNS</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Drive Space</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Drives</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check File System</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Firewall</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check GPU</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Hardware</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Health</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check IPv4</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check IPv6</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check MAC Address</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Motherboard</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Network</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check OS</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Password</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Pending Reboot</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Power</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check PowerShell</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check RAM</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check SMART Devices</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Software</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Subnet Manager</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Timezone</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check VPN</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check Windows Files</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Check XML Files</span>
+            </label>
+
+            <!-- Actions -->
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">BSOD</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Change Wallpaper</span>
+            </label>
+            <label class="flex items-center p-2 bg-[#1a1a1a] rounded cursor-pointer hover:bg-[#222222] border border-transparent hover:border-gray-700">
+                <input type="checkbox" class="w-4 h-4 rounded border border-gray-600 bg-[#0f0f0f] text-indigo-500 mr-2">
+                <span class="text-xs">Close Specific App</span>
+            </label>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-2">
+            <button class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-3 rounded text-xs">
+                <i class="fa-solid fa-play mr-1"></i>Start Extraction
+            </button>
+            <button class="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 px-3 rounded text-xs">
+                <i class="fa-solid fa-gear mr-1"></i>Settings
+            </button>
+            <button class="flex-1 bg-red-700 hover:bg-red-600 text-white py-2 px-3 rounded text-xs">
+                <i class="fa-solid fa-skull mr-1"></i>BSOD
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-4 text-center text-xs text-gray-500">
+            Use responsibly and only on systems you own or have permission to access.
+        </div>
+    </div>
+</body>
+</html>
